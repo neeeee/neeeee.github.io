@@ -21,7 +21,8 @@ const hololiveMembers = ['tokino_sora', 'roboco', 'aki_rosenthal',
                          'gigi_murin', 'cecilia_immergreen', 'raora_panthera',
                          'hidoshi_ao', 'otonose_kanade', 'ichijou_ririka',
                          'juufuutei_raden', 'todoroki_hajime', 'minato_aqua',
-                         'kiryu_coco', 'tsukumo_sana', 'harusaki_nodoka', 'a-chan']
+                         'kiryu_coco', 'tsukumo_sana', 'harusaki_nodoka', 'a-chan', 
+                         'isaki_riona', 'koganei_niko', 'mizumiya_su', 'rindo_chihaya', 'kikirara_vivi']
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1) + Math.ceil(min))
