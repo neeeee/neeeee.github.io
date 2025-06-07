@@ -166,8 +166,7 @@
         <script>
             const playerCount = async () => {
                 try {
-                    // let url = `https://low-res.moe/api/stats`;
-                    let url = `http://localhost:6969/api/stats`;
+                    let url = `https://low-res.moe/api/stats`;
                     const response = await fetch(url);
                     if (!response.ok) {
                         throw new Error(`Response status: ${response.status}`);
