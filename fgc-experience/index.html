@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Melty Chart</title>
+        <style>
+            html,
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2rem;
+            }
+            body {
+                background-color: #1b1b1b;
+                color: #fefefe;
+            }
+
+            a {
+                color: #fefefe;
+            }
+
+            a:visited {
+                text-decoration: none;
+                color: #fefefe;
+            }
+
+            #container {
+                width: 700px;
+                margin: auto;
+            }
+
+            .comparison-table {
+                overflow: auto;
+                margin: auto;
+                width: 700px;
+            }
+
+            .comparison-table table {
+                border: 0px solid #ffffff;
+                height: 100%;
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                border-spacing: 1px;
+                text-align: left;
+            }
+
+            .comparison-table caption {
+                caption-side: top;
+                text-align: left;
+            }
+
+            .comparison-table th {
+                border: 1px solid #fff;
+                background-color: #5e5c64;
+                color: #ffffff;
+                padding: 5px;
+            }
+
+            .comparison-table td {
+                border: 1px solid #fff;
+                background-color: #241f31;
+                color: #ffffff;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <header>
+                <h2 style="text-align: center">
+                    is anyone playing your game today?
+                </h2>
+            </header>
+            <main>
+                <section>
+                    <div class="output-container">
+                        <span id="yes-or-no"></span>
+                        <span id="message"></span>
+                        <span id="peak-player-output"></span>
+                    </div>
+                </section>
+                <section>
+                    <div class="comparison-table">
+                        <table id="games">
+                            <tr>
+                                <th>game</th>
+                                <th>players</th>
+                            </tr>
+                            <tr>
+                                <td id="melty">MELTY BLOOD: TYPE LUMINA</td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="dnf-duel">DNF DUEL</td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="bbcf">BLAZBLUE: CENTRALFICTION</td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="ggst">GUILTY GEAR: STRIVE</td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="uni2">
+                                    UNDER NIGHT IN BIRTH II SYS:CELES
+                                </td>
+                                <td class="players"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section>
+                    <p style="text-align: center">
+                        data pulled from
+                        <a href="https://steamcharts.com/" target="_blank"
+                            >https://steamcharts.com/</a
+                        >
+                    </p>
+                </section>
+            </main>
+        </div>
+        <script>
+            const playerCount = async () => {
+                try {
+                    let url = `https://low-res.moe/api/stats`;
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Response status: ${response.status}`);
+                    }
+                    const json = await response.json();
+                    console.log(json);
+                    return json;
+                } catch (error) {
+                    console.error(error.message);
+                }
+            };
+
+            async function main() {
+                const game_data_return = await playerCount();
+                const table_players = document.querySelectorAll("td.players");
+                table_players.forEach((td, index) => {
+                    td.textContent = game_data_return[index]["current_players"];
+                });
+                console.log("game data object: ", game_data_return);
+            }
+
+            main();
+        </script>
+    </body>
+</html>
