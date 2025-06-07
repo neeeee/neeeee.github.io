@@ -25,24 +25,24 @@
             }
 
             #container {
-                width: 700px;
                 margin: auto;
             }
 
             .comparison-table {
                 overflow: auto;
                 margin: auto;
-                width: 700px;
+                width: 350px;
+                box-shadow: 10px 10px 14px -7px rgba(0, 0, 0, 0.4);
+                -webkit-box-shadow: 10px 10px 14px -7px rgba(0, 0, 0, 0.4);
+                -moz-box-shadow: 10px 10px 14px -7px rgba(0, 0, 0, 0.4);
             }
 
             .comparison-table table {
-                border: 0px solid #ffffff;
                 height: 100%;
                 width: 100%;
                 table-layout: fixed;
                 border-collapse: collapse;
-                border-spacing: 1px;
-                text-align: left;
+                text-align: center;
             }
 
             .comparison-table caption {
@@ -51,17 +51,45 @@
             }
 
             .comparison-table th {
-                border: 1px solid #fff;
                 background-color: #5e5c64;
                 color: #ffffff;
                 padding: 5px;
             }
 
             .comparison-table td {
-                border: 1px solid #fff;
                 background-color: #241f31;
                 color: #ffffff;
-                padding: 5px;
+                background-size: 184px 69px;
+                background-repeat: no-repeat;
+                height: 67px;
+            }
+
+            #mbtl {
+                background-image: url(imgs/1372280.jpg);
+            }
+            #mbacc {
+                background-image: url(imgs/411370.jpg);
+            }
+            #dnf-duel {
+                background-image: url(imgs/1216060.jpg);
+            }
+            #bbcf {
+                background-image: url(imgs/586140.jpg);
+            }
+            #ggst {
+                background-image: url(imgs/1384160.jpg);
+            }
+            #uni2 {
+                background-image: url(imgs/2076010.jpg);
+            }
+            #kof15 {
+                background-image: url(imgs/1498570.jpg);
+            }
+            #sf6 {
+                background-image: url(imgs/1364780.jpg);
+            }
+            #t8 {
+                background-image: url(imgs/1778820.jpg);
             }
         </style>
     </head>
@@ -77,37 +105,49 @@
                 <section>
                     <div class="output-container">
                         <span id="yes-or-no"></span>
-                        <span id="message"></span>
-                        <span id="peak-player-output"></span>
                     </div>
                 </section>
                 <section>
                     <div class="comparison-table">
                         <table id="games">
-                            <tr>
+                            <!-- <tr>
                                 <th>game</th>
                                 <th>players</th>
-                            </tr>
+                            </tr> -->
                             <tr>
-                                <td id="melty">MELTY BLOOD: TYPE LUMINA</td>
+                                <td id="mbtl"></td>
                                 <td class="players"></td>
                             </tr>
                             <tr>
-                                <td id="dnf-duel">DNF DUEL</td>
+                                <td id="mbacc"></td>
                                 <td class="players"></td>
                             </tr>
                             <tr>
-                                <td id="bbcf">BLAZBLUE: CENTRALFICTION</td>
+                                <td id="dnf-duel"></td>
                                 <td class="players"></td>
                             </tr>
                             <tr>
-                                <td id="ggst">GUILTY GEAR: STRIVE</td>
+                                <td id="bbcf"></td>
                                 <td class="players"></td>
                             </tr>
                             <tr>
-                                <td id="uni2">
-                                    UNDER NIGHT IN BIRTH II SYS:CELES
-                                </td>
+                                <td id="ggst"></td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="uni2"></td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="kof15"></td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="sf6"></td>
+                                <td class="players"></td>
+                            </tr>
+                            <tr>
+                                <td id="t8"></td>
                                 <td class="players"></td>
                             </tr>
                         </table>
@@ -126,7 +166,8 @@
         <script>
             const playerCount = async () => {
                 try {
-                    let url = `https://low-res.moe/api/stats`;
+                    // let url = `https://low-res.moe/api/stats`;
+                    let url = `http://localhost:6969/api/stats`;
                     const response = await fetch(url);
                     if (!response.ok) {
                         throw new Error(`Response status: ${response.status}`);
