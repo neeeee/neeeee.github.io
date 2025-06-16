@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f7f7f7;
+    color: #1b1b1b;
+  }
+
+  a:link,
+  a:active {
+    color: #a5adce;
+  }
+
+  a:visited {
+    color: #a5adce;
+  }
+
+  a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1b1b1b;
+    color: #f7f7f7;
+  }
+
+  a:link,
+  a:active {
+    color: #a5adce;
+  }
+
+  a:visited {
+    color: #a5adce;
+  }
+
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  width: 37.5rem;
+}
+
+.nav {
+  list-style-type: number;
+}
