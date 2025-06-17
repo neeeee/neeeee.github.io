@@ -28,7 +28,7 @@ twitter_username: osuchannsfw
 github_username: neeeee
 
 # Build settings
-theme: minima
+theme: neeeee/contrast
 plugins:
   - jekyll-feed
 
