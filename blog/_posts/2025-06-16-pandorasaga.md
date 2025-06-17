@@ -2,7 +2,7 @@
 layout: post
 title:  "Pandora Saga on Linux"
 date:   2025-06-16 12:30:00 -0700
-categories: gaming Linux PandoraSaga 
+categories: gaming 
 ---
 
 ### all this to play an old game
