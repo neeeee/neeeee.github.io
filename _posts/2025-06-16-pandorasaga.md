@@ -10,7 +10,7 @@ categories: gaming
 
 I spent a solid 6 hours attempting to get around VM detection in a Pandora Saga private server client to play on Linux.  
 
-vm detection makes sense, given the game has a history of multi-boxing, but personally, I don't believe multi-boxing is a harmful practice in this game.  
+VM detection makes sense, given the game has a history of multi-boxing, but personally, I don't believe multi-boxing is a harmful practice in this game.  
 I know how it *can* be harmful if automation isn't prevented, resulting in these two choices:  
 1. **emulated inputs are blocked**
 2. **running processes are monitored**  
@@ -51,7 +51,7 @@ my testing resulted in these findings:
 2. Moonlight RDP into a virtual machine blocked keyboard input in game
 3. passing a keyboard to a Windows vm accessed over Moonlight gave me keyboard input
 4. running the game in a basic QXL vm with no graphics drivers allowed keyboard input
-5. OpenGL + Spice 3d acceleration config flags exist
+5. OpenGL + Spice 3D acceleration config flags exist
 6. virt-manager supports M-Dev SR-IOV GPU partitions
 7. my install of QEMU had SDL window support but no Spice, only spice-app
 
