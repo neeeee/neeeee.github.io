@@ -28,10 +28,11 @@ twitter_username: osuchannsfw
 github_username: neeeee
 
 # Build settings
-remote_theme: neeeee/contrast
+# remote_theme: neeeee/contrast
+theme: minima
 plugins:
-#  - jekyll-feed
-  - jekyll-remote-theme
+  - jekyll-feed
+  # - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
