@@ -28,9 +28,9 @@ twitter_username: osuchannsfw
 github_username: neeeee
 
 # Build settings
-# remote_theme: niklasbuschmann/contrast@v2.11
+remote_theme: niklasbuschmann/contrast@v2.11
 
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 
