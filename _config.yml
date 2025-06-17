@@ -30,7 +30,7 @@ github_username: neeeee
 # Build settings
 remote_theme: neeeee/contrast
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
   - jekyll-remote-theme
 
 # Exclude from processing.
