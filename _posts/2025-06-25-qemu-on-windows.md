@@ -76,7 +76,7 @@ Enable hardware virtualization
         -device usb-kbd `
         -device ich9-ahci,id=sata0,bus=pcie.0,addr=0x7 `
         -display sdl,gl=on `
-        -monitor stdio
+        -monitor stdio `
         -nodefaults
    ```  
    Explanation of key flags:  
@@ -94,3 +94,5 @@ Enable hardware virtualization
 8. (Optional) GUI front-end  
    - You can install **virt-manager** under WSL2 with an X server, or use third-party GUIs like **AQEMU**.  
    - This makes managing multiple VMs more convenient.
+
+-- mino
